@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.back-color{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.bg-1{
+    flex:1;
+    background-color: rgb(180,243,175);
+}
+.bg-2{
+    flex:1;
+    background-color: rgb(163,236,240);
+}
+.about-container{
+    width: 85%;
+    min-height: 80vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+   
+    padding: 20px;
+    border-radius: 5px;box-shadow: 24px 30px #6d8dad;
+
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img-container{
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.text-container{
+    flex: 1;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.text-container h1{
+    font-size: 50px;
+    padding: 10px 0px;
+}
+.text-container p{
+    font-size: 20px;
+    padding: 10px 0px;
+}
+.text-container a
+{
+    text-decoration: none;
+    padding: 12px;
+    border: 2px solid rebeccapurple;
+    margin-top: 30px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.5s all ease-in-out;
+}
+.text-container a:hover{
+    background-color: transparent;
+    color: black;
+    border: 2px solid rebeccapurple;
+}
+
+.active{
+    background-color: #09a9cd;
+    position: relative;
+    top: 10px;
+    padding: 10px;
+  
+  }
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    position: relative;
+    height: 10%;
+    justify-content: space-between;
+    background-color: black;
+    
+}
+.navbar ul li{
+    list-style:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    justify-content: center;
+    
+}
+.logo{
+    position: relative;
+    cursor: pointer;
+    margin-top: -34px;
+  
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    margin-top: -50px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    float: right;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.navbar ul li a img{
+  position: relative;
+  top:15px;
+  border-radius: 50%;
+}

@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\moksh\Desktop\html folder\Project\CSS\edit-order.css">
+     
+    </head>
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="medkit"></ion-icon></span>
+                            <span class="title">E PHARMACY</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Customers-list.html">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                            <span class="title">Products</span>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a href="orders.html" class="active">
+                            <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                            <span class="title">Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="categories.html">
+                            <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+                            <span class="title">Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                            <span class="title">Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="message.html">
+                            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                            <span class="title">Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></ion-icon></span>
+                            <span class="title">Signout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder="Search here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                    <div class="admin-img">
+                     <h2>Admin</h2>
+                    </div>
+                    <div class="admin">
+                        <a href="./profile.html"><img src="C:\Users\moksh\Desktop\html folder\Project\Images\alex.png" height="50px" width="50px"></a>
+                    </div>
+                </div>
+
+<div class="cardheader">
+        <section id="registration-page">
+        <form class="signup-form">
+            <!-- FORM HEADER -->
+            <div class="form-header">
+                <h1>EDIT ORDER</h1>
+            </div>
+            <!-- FORM BODY -->
+            <div class="form-body">
+                <!-- First name & Last name -->
+                <div class="row">
+                    <div class="input-group">
+                        <label> Product Name </label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="input-group">
+                        <label>Category</label>
+                       <select>
+                        <option>Covid Essentails</option>
+                        <option>Ayurveda</option>
+                       </select>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="row">
+                    <div class="input-group">
+                        <label>Quantity </label>
+                        <input type="email" placholder="Enter your email address">
+                    </div>
+                    <div class="input-group">
+                        <label>Product Status </label>
+                       <select>
+                        <option>Pending</option>
+                        <option>Dipatched</option>
+                        <option>Delivered</option>
+                       </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Manf Date </label>
+                        <input type="date" placholder="Enter your your password">
+                    </div>
+                    <div class="input-group">
+                        <label>Exp Date</label>
+                        <input type="date" placholder="Enter your password again">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Product Image </label>
+                        <input type="file" >
+                    </div>
+                    <div class="input-group">
+                        <label>Product Price</label>
+                        <input type="text">
+                    </div>
+                </div>
+            <div class="form-footer">
+                <button class="btn">EDIT ORDER</button>
+            </div>
+        </form>
+    </section>
+  </div>
+
+                  
+                    
+                   
+                   
+            </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <script>
+
+        let toggle=document.querySelector('.toggle');
+        let navigation=document.querySelector('.navigation');
+        let main=document.querySelector('.main');
+
+        toggle.onclick=function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+
+        navbar=document.querySelector(".navigation").querySelectorAll("a");
+       console.log(navigation);
+
+       navigation.forEach(element=>{
+        element.addEventListener("click",function(){
+        navigation.forEach(nav=>nav.classList.remove("active"))
+        this.classList.add("active");
+    })
+       });
+     </script>
+    </body>
+</html>

@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../user-css/user.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    </head>
+    <body>
+        <div id="main">
+            <div class="navbar">
+                <img src="C:\Users\moksh\Desktop\html folder\Project\Images\logo.jpg" class="logo"height="75px" width="100px">
+                <ul>
+                    <li><a href="user.html" class="active">Home</a></li>
+                    <li><a href="./user-products.html" >Products</a></li>
+                    <li><a href="./category.html">Categories</a></li>
+                    <li><a href="contact_form.html">Contact Us</a></li>
+                    <li><a href="./ab.html">About Us</a></li>
+                    <li><a href="./cart.html">Cart</a></li>
+                    
+                    <li><a href="user-profile.html"><img src="C:\Users\moksh\Desktop\html folder\Project\Images\user2.avif" width="60px" height="60px"></a></li>
+                    
+                    
+                </ul>
+            </div>
+            
+
+            <div class="galleryContainer">
+              <div class="slideShowContainer">
+                  <div id="playPause" onclick="playPauseSlides()"></div>
+                  <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+                  <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+                  <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+                  <div class="imageHolder">
+                      <img src="../images/a.jpg">
+                      <p class="captionText"></p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="../images/b.jpg">
+                      <p class="captionText"></p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="../images/c.jpg">
+                      <p class="captionText"></p>
+                  </div>
+                  <div class="imageHolder">
+                      <img src="../images/d.jpg">
+                      <p class="captionText"></p>
+                  </div>
+              </div>
+              <div id="dotsContainer"></div>
+          </div>
+        </div>
+        
+
+
+   
+
+          <div class="inner-width">
+            <h1 class="section-title">Our Services</h1>
+            <div class="border"></div>
+            <div class="services-container">
+    
+              <div class="service-box">
+                
+                        <div class="service-title">Fast Delivery</div>
+                <div class="service-desc">
+                The fast delivery service is provided by our organization that prompt and timely transporation and delivery of goods or services from the seller to the customer.
+                </div>
+              </div>
+    
+              <div class="service-box">
+                
+                <div class="service-title">24x7 Service</div>
+                <div class="service-desc">
+                 The 24/7 service is provided by our organization that involves to provide the service or support to customers around the clock, seven days a week, without any interruption
+                 or time constraints.
+                </div>
+              </div>
+    
+              <div class="service-box">
+                <div class="service-icon">
+                 
+                </div>
+                <div class="service-title">Door to Door Delivery</div>
+                <div class="service-desc">
+                 <p>The door-to-door delivery service is provided by our organization that involves the transporation and delivery of goods to the customers location without
+                 the need of the visiting the physical stores.</p>
+                </div>
+              </div>
+    
+
+            </div>
+          </div>
+      
+
+
+        <footer class="footer">
+            <div class="container">
+            <div class="row">
+            <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+            <li><a href="">our services</a></li>
+            
+            <li><a href="">privacy policy</a></li>
+            <li><a href="">affilliate program</a></li>
+            </ul>
+            </div>
+            <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+            <li><a href="./contact_form.html">Contact Us</a></li>
+            <li><a href="./history.html">order status</a></li>
+            </ul>
+            </div>
+            <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+            <li><a href="">Medicines</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Healthy Drinks</a></li>
+            
+            </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us On</h4>
+                <ul>
+                  <li ><a href="#" class="icon1"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-twitter"></i></a></li>
+                    
+                
+                </ul>
+                </div>
+            
+            </div>
+            </div>
+            </footer>
+        <script>
+          
+var slideIndex,slides,dots,captionText;
+function initGallery(){
+    slideIndex = 0;
+    slides=document.getElementsByClassName("imageHolder");
+    slides[slideIndex].style.opacity=1;
+
+    captionText=document.querySelector(".captionTextHolder .captionText");
+    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+
+    //disable nextPrevBtn if slide count is one
+    if(slides.length<2){
+        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
+        nextPrevBtns.style.display="none";
+        for (i = 0; i < nextPrevBtn.length; i++) {
+            nextPrevBtn[i].style.display="none";
+        }
+    }
+
+    //add dots
+    dots=[];
+    var dotsContainer=document.getElementById("dotsContainer"),i;
+    for (i = 0; i < slides.length; i++) {
+        var dot=document.createElement("span");
+        dot.classList.add("dots");
+        dotsContainer.append(dot);
+        dot.setAttribute("onclick","moveSlide("+i+")");
+        dots.push(dot);
+    }
+    dots[slideIndex].classList.add("active");
+}
+initGallery();
+function plusSlides(n) {
+    moveSlide(slideIndex+n);
+}
+function moveSlide(n){
+    var i;
+    var current,next;
+    var moveSlideAnimClass={
+          forCurrent:"",
+          forNext:""
+    };
+    var slideTextAnimClass;
+    if(n>slideIndex) {
+        if(n >= slides.length){n=0;}
+        moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
+        moveSlideAnimClass.forNext="moveLeftNextSlide";
+        slideTextAnimClass="slideTextFromTop";
+    }else if(n<slideIndex){
+        if(n<0){n=slides.length-1;}
+        moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
+        moveSlideAnimClass.forNext="moveRightPrevSlide";
+        slideTextAnimClass="slideTextFromBottom";
+    }
+
+    if(n!=slideIndex){
+        next = slides[n];
+        current=slides[slideIndex];
+        for (i = 0; i < slides.length; i++) {
+            slides[i].className = "imageHolder";
+            slides[i].style.opacity=0;
+            dots[i].classList.remove("active");
+        }
+        current.classList.add(moveSlideAnimClass.forCurrent);
+        next.classList.add(moveSlideAnimClass.forNext);
+        dots[n].classList.add("active");
+        slideIndex=n;
+        captionText.style.display="none";
+        captionText.className="captionText "+slideTextAnimClass;
+        captionText.innerText=slides[n].querySelector(".captionText").innerText;
+        captionText.style.display="block";
+    }
+
+}
+var timer=null;
+function setTimer(){
+    timer=setInterval(function () {
+        plusSlides(1) ;
+    },3000);
+}
+setTimer();
+function playPauseSlides() {
+    var playPauseBtn=document.getElementById("playPause");
+    if(timer==null){
+        setTimer();
+        playPauseBtn.style.backgroundPositionY="0px"
+    }else{
+        clearInterval(timer);
+        timer=null;
+        playPauseBtn.style.backgroundPositionY="-33px"
+    }
+}
+        </script>
+    </body>
+</html>

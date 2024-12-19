@@ -1,0 +1,182 @@
+
+body{
+    background-image:url(../images/phar7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+  width: 101%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  position: relative;
+  top: -9px;
+  left: -5px;
+  height: 10px;
+  justify-content: space-between;
+  background-color: black;
+  
+}
+
+.logo{
+  position: relative;
+  cursor: pointer;
+  margin-top: -34px;
+
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin:0px 20px;
+  margin-top: -60px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  float: right;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width:100%;
+}
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:black;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(16, 69, 83);
+    background: transparent;
+    color:black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #0d6159;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+button:hover span{
+    width:100%;
+
+}
+
+button:hover span{
+   border: none;
+
+}
+.content a{
+  text-decoration: none;
+  color: #000;
+}
+.footer{
+  background-color:#000;
+  padding:1px 70px;
+  position:relative;
+  left: -10px;
+  top: 750px;
+  width: 92.6%;
+  }
+  .footer-col{
+  width:20%; 
+  padding:15px 0px;
+  margin-left: 10px;
+  display: inline-table;
+  }
+  .footer-col h4{
+  font-size:18px;
+  color:#ffffff;
+  
+  text-transform:capitalize;
+  margin-bottom:45px;
+  font-weight:00;
+  position:relative;
+  }
+  .footer-col h4::before{
+  content:' ';
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  background-color:#e91e63;
+  height:2px;
+  box-sizing:border-box;
+  width:50px;
+  }
+  .footer-col ul li:not(:last-child){
+  margin-bottom:10px;
+  }
+  .footer-col ul li a{
+  font-size:16px;
+  text-transform:uppercase;
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:300;
+  color:#bbbbbb;
+  display:inline-block;
+  transition:all 0.2s ease;
+  position:relative;
+  left: -40px;
+  }
+  .footer-col ul li a:hover{
+  color:cyan;
+ 
+ 
+  }
+  .footer-col .social-links{
+  margin-left:-10%;
+  margin-top:-12%;
+  }
+  .box img{
+  height:170px;
+  width:250px;
+  }
+  .footer-col li{
+
+      position: relative;
+
+  }
+  .footer-col ul .icon{
+    padding-left: 30px;
+    font-size: 30px;
+  }
+  .footer-col ul .icon1{
+    font-size: 30px;
+  }

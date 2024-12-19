@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+.content-box{
+    background: #000;
+    height: 200vh;
+    color: #fff;
+}
+h1{
+    text-align: center;
+    padding-left: 100px;
+}
+h1::after{
+    content: '';
+    background: #008000;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 50px;
+}
